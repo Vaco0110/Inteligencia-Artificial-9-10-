@@ -1,16 +1,15 @@
 Detector de Spam con Naive Bayes
 
-https://img.shields.io/badge/Python-3.8%252B-blue
-https://img.shields.io/badge/Machine%2520Learning-Naive%2520Bayes-orange
-https://img.shields.io/badge/GUI-Tkinter-green
-https://img.shields.io/badge/License-MIT-lightgrey
+Integhrantes 
+Jesus Hector Roman Vizar
+Jose Humberto Gutierrez Beltran
 
 Sistema inteligente de clasificación de mensajes spam/ham implementado con el algoritmo Naive Bayes
 
 Características • Instalación • Uso • Estructura • Documentación
 
 
-Tabla de Contenidos
+#Tabla de Contenidos
 Descripción
 
 Características
@@ -21,9 +20,6 @@ Uso
 
 Documentación Técnica
 
-Contribución
-
-Licencia
 
 Descripción
 Este proyecto implementa un sistema de detección de spam utilizando el algoritmo Naive Bayes. El sistema es capaz de clasificar mensajes de texto en dos categorías: spam (correo no deseado) o ham (correo legítimo). La aplicación incluye una interfaz gráfica intuitiva desarrollada con Tkinter.
@@ -208,16 +204,5 @@ python -m pytest tests/
 Cobertura de Tests
 bash
 python -m pytest --cov=src tests/
-Licencia
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
 
-Autores
-Tu Nombre - Desarrollo inicial - TuUsuario
-
-Agradecimientos
-Algoritmo Naive Bayes basado en el libro "Pattern Recognition and Machine Learning"
-
-Dataset de ejemplo del repositorio UCI Machine Learning
-
-Comunidad de Scikit-learn por su implementación de referencia
 
