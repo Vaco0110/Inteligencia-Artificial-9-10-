@@ -4,18 +4,12 @@ Integrantes
 Jesus Hector Roman Vizar 
 Jose Humberto Guitierrez Beltran
 
-
-https://img.shields.io/badge/Python-3.8+-blue.svg
-https://img.shields.io/badge/Flask-2.3+-green.svg
-https://img.shields.io/badge/scikit--learn-1.3+-orange.svg
-https://img.shields.io/badge/License-MIT-yellow.svg
-
 Un sistema inteligente de recomendación de películas basado en contenido, implementado como una aplicación web moderna utilizando Flask y algoritmos de machine learning.
 
-Tabla de Contenidos
+#Tabla de Contenidos
+
 Características
 
-Demo
 
 Instalación
 
@@ -27,7 +21,6 @@ Desarrollo
 
 Tecnologías Utilizadas
 
-Contribución
 
 
 Características
@@ -41,8 +34,6 @@ Base de Datos Integrada: Dataset pre-cargado con 20 películas populares
 
 Diseño Responsive: Compatible con dispositivos móviles y desktop
 
-Demo
-https://via.placeholder.com/800x400.png?text=CineRecom+Interface+Demo
 
 Características principales de la interfaz:
 
@@ -65,36 +56,10 @@ pip (gestor de paquetes de Python)
 Git
 
 Pasos de Instalación
-Clonar el repositorio
 
-bash
-git clone https://github.com/tuusuario/cineRecom.git
-cd cineRecom
-Crear un entorno virtual (recomendado)
+Descargar los archivos y abrirlos en Visual Studio code o abrir el repositorio clonado con Visual studio code
+Para poder iniciarlo correr el archivo app.py y abrir copiar este link en el navegador para poder abrir la pagina -> http://localhost:5000
 
-bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
-Instalar dependencias
-
-bash
-pip install -r requirements.txt
-Ejecutar la aplicación
-
-bash
-python app.py
-Abrir en el navegador
-
-text
-http://localhost:5000
-Instalación Rápida (Docker)
-bash
-# Próximamente - Estamos trabajando en la containerización
 Uso
 Uso Básico
 Seleccionar Película de Referencia
@@ -262,26 +227,5 @@ Cosine Similarity: Cálculo de similitud entre películas
 
 Content-Based Filtering: Algoritmo de recomendación
 
-Contribución
-¡Las contribuciones son bienvenidas! Por favor sigue estos pasos:
-
-Fork el proyecto
-
-Crea una rama para tu feature (git checkout -b feature/AmazingFeature)
-
-Commit tus cambios (git commit -m 'Add some AmazingFeature')
-
-Push a la rama (git push origin feature/AmazingFeature)
-
-Abre un Pull Request
-
-Guía de Estilo de Código
-Sigue PEP 8 para código Python
-
-Usa nombres descriptivos para variables y funciones
-
-Documenta funciones y clases con docstrings
-
-Mantén el código limpio y organizado
 
 
