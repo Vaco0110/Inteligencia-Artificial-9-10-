@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="main-container">
+                <div class="row">
+                    <!-- Panel de Control -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-cog me-2"></i>Configuración
+                            </div>
+                            <div class="card-body">
+                                <form id="recommendationForm">
+                                    <!-- Película -->
+                                    <div class="mb-3">
+                                        <label for="pelicula" class="form-label fw-bold">Película de referencia:</label>
+                                        <select class="form-select" id="pelicula">
+                                            {% for pelicula in peliculas %}
+                                            <option value="{{ pelicula }}" {% if pelicula == 'The Dark Knight' %}selected{% endif %}>
+                                                {{ pelicula }}
+                                            </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <!-- Número de Recomendaciones -->
+                                    <div class="mb-3">
+                                        <label for="num_recomendaciones" class="form-label fw-bold">Número de recomendaciones:</label>
+                                        <input type="number" class="form-control" id="num_recomendaciones" value="5" min="1" max="20">
+                                    </div>
+
+                                    <!-- Botón -->
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-magic me-2"></i>Generar Recomendaciones
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Información del Sistema -->
+                                <div class="mt-4">
+                                    <h6 class="fw-bold">Información del Sistema:</h6>
+                                    <small class="text-muted">
+                                        • <strong>Recomendación por contenido:</strong> Encuentra películas similares basándose en sus géneros<br><br>
+                                        <strong>Base de datos:</strong><br>
+                                        • 20 películas<br>
+                                        • Sistema de similitud por géneros
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Resultados -->
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-list me-2"></i>Recomendaciones
+                            </div>
+                            <div class="card-body">
+                                <div id="loadingRecomendaciones" class="loading">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Cargando...</span>
+                                    </div>
+                                    <p class="mt-2">Generando recomendaciones...</p>
+                                </div>
+                                <div id="resultadosRecomendaciones">
+                                    <div class="text-center text-muted">
+                                        <i class="fas fa-film fa-3x mb-3"></i>
+                                        <p>Selecciona una película y haz clic en "Generar Recomendaciones" para comenzar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
