@@ -1,0 +1,159 @@
+{
+  "predicados": {
+    "F1": "Tiene fiebre alta mayor a 38.5°C",
+    "F2": "Tiene fiebre moderada o baja (menos de 38.5°C)",
+    "F3": "No tiene fiebre actualmente",
+    "F4": "La fiebre ha durado más de 3 días consecutivos",
+    "T1": "Tiene tos seca e irritativa sin flema",
+    "T2": "Tiene tos productiva con flema espesa, amarilla o verde",
+    "T3": "Ha tenido tos por más de 3 semanas",
+    "T4": "La tos suena como un 'ladrido de perro'",
+    "T5": "Ha tosido sangre o flema con sangre",
+    "T6": "Tiene episodios de tos violenta con más de 5 golpes seguidos",
+    "N1": "Tiene congestión nasal o moqueo",
+    "N2": "Tiene picazón en nariz, estornudos frecuentes y ojos llorosos",
+    "G1": "Tiene dolor de garganta muy intenso al tragar",
+    "G2": "Se observan puntos blancos o placas en las amígdalas",
+    "G3": "Tiene la voz muy ronca o ha perdido la voz",
+    "G4": "Tiene ganglios inflamados en el cuello",
+    "R1": "Escucha silbidos o pitidos en el pecho al respirar",
+    "R2": "Siente dificultad severa para respirar, incluso en reposo",
+    "R3": "Respira muy rápido, más de 30 veces por minuto",
+    "R4": "Su dificultad para respirar ha empeorado progresivamente durante meses",
+    "D1": "Siente dolor agudo en el pecho que empeora al respirar profundo",
+    "D2": "Siente dolor o presión facial en pómulos o frente",
+    "D3": "Siente un dolor punzante solo en un lado del pecho",
+    "S1": "Tiene malestar general leve y fatiga moderada",
+    "S2": "Tiene malestar general intenso con dolores musculares severos",
+    "S3": "Los síntomas aparecen solo en ciertas estaciones o cerca de alérgenos",
+    "S4": "Se despierta empapado en sudor durante la noche",
+    "S5": "Ha perdido más de 5 kg de peso sin intentarlo",
+    "S6": "Ha fumado más de una cajetilla diaria por más de 10 años",
+    "S7": "Los síntomas comenzaron de forma muy súbita (en pocas horas)",
+    "S8": "Mejora notablemente al usar un inhalador",
+    "S9": "Ha estado en contacto con alguien diagnosticado con Tuberculosis",
+    "S10": "Ha perdido el olfato o el gusto repentinamente",
+    "S11": "El médico escuchó sonidos como 'velcro' en sus pulmones",
+    "O1": "Su nivel de oxígeno en sangre es menor al 94% (medido con oxímetro)",
+    "C1": "Tiene los labios o uñas azulados o morados",
+    "E1": "Tiene historial de alergias, rinitis alérgica o dermatitis",
+    "M1": "Tiene dolores musculares generalizados en todo el cuerpo",
+    "ES1": "Tiene escalofríos tan fuertes que tiembla",
+    "TA1": "Su corazón late muy rápido o siente palpitaciones",
+    "VO1": "Vomita después de los episodios intensos de tos",
+    "GI1": "Hace un sonido fuerte (como gallo) al tomar aire después de toser",
+    "MA1": "Usa los músculos del cuello y costillas para poder respirar",
+    "IN1": "Tiene un sistema inmune debilitado o toma medicamentos inmunosupresores",
+    "CO1": "Ha estado en contacto cercano con personas enfermas recientemente",
+    "ED1": "Es menor de 5 años de edad",
+    "CR1": "El médico escuchó sonidos crepitantes anormales en sus pulmones",
+    "HM1": "El médico notó que no se escuchan sonidos respiratorios en alguna zona",
+    "AN1": "Ha usado antibióticos recientemente sin mejoría"
+  },
+  "reglas": {
+    "Resfriado Común": {
+      "requeridos": ["F2", "N1", "T1", "S1"],
+      "excluidos": ["F1", "S2", "R2", "G2", "O1"]
+    },
+    "Influenza (Gripe)": {
+      "requeridos": ["F1", "T1", "S2", "S7", "M1"],
+      "excluidos": ["N2", "G2", "T2", "S10"]
+    },
+    "COVID-19": {
+      "requeridos": ["F1", "T1", "S2", "S10", "CO1"],
+      "excluidos": ["G2", "N2", "T2"]
+    },
+    "COVID-19 Severo": {
+      "requeridos": ["F1", "T1", "S10", "R2", "O1"],
+      "excluidos": ["G2", "N2"]
+    },
+    "Faringitis Estreptocócica": {
+      "requeridos": ["F1", "G1", "G2", "G4"],
+      "excluidos": ["T1", "T2", "N1", "R1"]
+    },
+    "Laringitis Aguda": {
+      "requeridos": ["F2", "T4", "G3"],
+      "excluidos": ["F1", "R2", "T2", "G2", "O1"]
+    },
+    "Sinusitis Bacteriana": {
+      "requeridos": ["F2", "N1", "T2", "D2", "F4"],
+      "excluidos": ["R1", "G1", "R2", "S10"]
+    },
+    "Rinitis Alérgica": {
+      "requeridos": ["F3", "N1", "N2", "S3", "E1"],
+      "excluidos": ["F1", "F2", "T2", "S2", "G2"]
+    },
+    "Asma (Episodio)": {
+      "requeridos": ["R1", "S8", "T1", "E1"],
+      "excluidos": ["F1", "G2", "T2", "O1"]
+    },
+    "Crisis Asmática Grave": {
+      "requeridos": ["R1", "R2", "MA1", "S7"],
+      "excluidos": ["F1", "T2", "N1"]
+    },
+    "Crisis Asmática Severa con Hipoxia": {
+      "requeridos": ["R1", "R2", "O1", "C1", "MA1"],
+      "excluidos": ["F1", "T2"]
+    },
+    "Bronquitis Aguda": {
+      "requeridos": ["F2", "T2", "R1"],
+      "excluidos": ["F1", "D1", "R2", "O1"]
+    },
+    "Bronquiolitis (Bebés/Niños)": {
+      "requeridos": ["F2", "N1", "R1", "R3", "ED1"],
+      "excluidos": ["F1", "G2", "T2", "D1"]
+    },
+    "Neumonía Bacteriana": {
+      "requeridos": ["F1", "T2", "R2", "D1", "ES1", "CR1"],
+      "excluidos": ["N2", "S3", "G3", "S10"]
+    },
+    "Neumonía Bacteriana Severa": {
+      "requeridos": ["F1", "T2", "R2", "D1", "O1", "CR1"],
+      "excluidos": ["N2", "S3"]
+    },
+    "Neumonía Viral (Atípica)": {
+      "requeridos": ["F2", "T1", "S2", "R2"],
+      "excluidos": ["T2", "G2", "D2", "S7", "ES1"]
+    },
+    "EPOC (Enfermedad Pulmonar Obstructiva Crónica)": {
+      "requeridos": ["T3", "R1", "R4", "S6"],
+      "excluidos": ["F1", "S7", "S10", "S9", "ED1"]
+    },
+    "EPOC Exacerbado": {
+      "requeridos": ["T3", "R1", "R4", "S6", "T2", "R2"],
+      "excluidos": ["S7", "S10"]
+    },
+    "Tuberculosis Pulmonar": {
+      "requeridos": ["T3", "T5", "S4", "S5"],
+      "excluidos": ["S7", "D2", "N2", "S8"]
+    },
+    "Tuberculosis Pulmonar con Contacto": {
+      "requeridos": ["T3", "T5", "S4", "S5", "S9"],
+      "excluidos": ["S7", "D2", "N2"]
+    },
+    "Fibrosis Pulmonar": {
+      "requeridos": ["T1", "R4", "S11", "F3"],
+      "excluidos": ["F1", "F2", "T2", "S2", "S7"]
+    },
+    "Tos Ferina (Pertussis)": {
+      "requeridos": ["T6", "GI1", "VO1"],
+      "excluidos": ["F1", "R2", "O1"]
+    },
+    "Embolia Pulmonar": {
+      "requeridos": ["R2", "D1", "S7", "TA1"],
+      "excluidos": ["F1", "T2", "N1", "CR1"]
+    },
+    "Neumotórax": {
+      "requeridos": ["D3", "R2", "S7", "HM1"],
+      "excluidos": ["F1", "T2", "N1", "CR1"]
+    },
+    "Neumonía por Aspiración": {
+      "requeridos": ["F1", "T2", "R2", "CR1", "IN1"],
+      "excluidos": ["N1", "G1", "S3"]
+    },
+    "Neumonía Nosocomial": {
+      "requeridos": ["F1", "T2", "R2", "AN1", "IN1"],
+      "excluidos": ["N1", "S3", "S7"]
+    }
+  }
+}
