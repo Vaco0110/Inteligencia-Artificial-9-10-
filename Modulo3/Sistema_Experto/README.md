@@ -1,10 +1,10 @@
-Sistema Experto de Diagnóstico Respiratorio
+#Sistema Experto de Diagnóstico Respiratorio#
 
-Descripción
+#Descripción#
 
 El Sistema Experto de Diagnóstico Respiratorio es una aplicación desarrollada en Python que utiliza lógica proposicional y una interfaz gráfica moderna para asistir en el diagnóstico de enfermedades respiratorias. El sistema emplea un enfoque de preguntas inteligentes y adaptativas para llegar a conclusiones de manera eficiente.
 
-#Características Principales
+#Características Principales#
 Sistema de Preguntas Inteligente
 Priorización automática de síntomas más relevantes
 
@@ -14,7 +14,8 @@ Enfoque discriminante para diferenciar entre diagnósticos probables
 
 Optimización del proceso con menos preguntas necesarias
 
-Base de Conocimiento Completa
+#Base de Conocimiento Completa#
+
 25 enfermedades respiratorias diferentes
 
 46 síntomas y signos clínicos evaluados
@@ -23,7 +24,8 @@ Reglas lógicas precisas para cada diagnóstico
 
 Cobertura amplia desde resfriados comunes hasta condiciones graves
 
-Interfaz Moderna y Usable
+#Interfaz Moderna y Usable#
+
 Diseño responsive con ttkbootstrap
 
 Panel de explicaciones detalladas para cada diagnóstico
@@ -32,8 +34,10 @@ Barra de progreso visual
 
 Resultados ordenados por probabilidad
 
-Librerías Utilizadas
+#Librerías Utilizadas#
+
 Librerías Principales
+
 ttkbootstrap - Interfaz gráfica moderna y temática
 
 tkinter - Framework base para la interfaz gráfica
@@ -44,14 +48,15 @@ logging - Sistema de registro de eventos
 
 pathlib - Manejo de rutas de archivos
 
-Librerías Estándar
+#Librerías Estándar#
+
 typing - Tipado de datos para mejor desarrollo
 
 sys - Funcionalidades del sistema
 
 traceback - Manejo de errores detallado
 
-Instalación y Ejecución
+#Instalación y Ejecución#
 Prerrequisitos
 Python 3.7 o superior
 
@@ -65,17 +70,12 @@ main.py
 logica.py
 interfaz.py
 base_de_conocimiento.json
-Instalar las dependencias necesarias:
+Instalar las dependencias necesarias cpn "pip install (Nombre de la libreria)"
 
-bash
-pip install ttkbootstrap
-Ejecutar la aplicación:
 
-bash
-python main.py
-Verificar que todos los archivos estén en la misma carpeta
 
-Cómo Funciona el Sistema
+
+#Cómo Funciona el Sistema#
 Arquitectura del Sistema
 1. Base de Conocimiento (base_de_conocimiento.json)
 Predicados: Síntomas y signos clínicos codificados
@@ -111,7 +111,7 @@ Refinamiento: Enfoca en síntomas que diferencian entre diagnósticos principale
 
 Conclusión: Presenta resultados ordenados por probabilidad
 
-Tutorial de Uso
+#Tutorial de Uso#
 Paso 1: Inicio de la Aplicación
 Ejecute python main.py
 
@@ -181,13 +181,3 @@ COVID-19 - 95% de probabilidad
 Influenza - 45% de probabilidad
 
 Resfriado Común - 15% de probabilidad
-
-Estructura del Proyecto
-text
-sistema-experto-respiratorio/
-│
-├── main.py                 # Punto de entrada de la aplicación
-├── logica.py              # Motor de inferencia lógica
-├── interfaz.py            # Interfaz gráfica de usuario
-├── base_de_conocimiento.json # Base de conocimiento médica
-└── sistema_experto.log    # Archivo de log (generado automáticamente)
