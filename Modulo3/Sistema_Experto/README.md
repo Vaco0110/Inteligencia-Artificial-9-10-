@@ -1,8 +1,8 @@
-Sistema Experto de Diagnóstico Respiratorio
-Descripción
+##Sistema Experto de Diagnóstico Respiratorio
+#Descripción
 El Sistema Experto de Diagnóstico Respiratorio es una aplicación desarrollada en Python que utiliza lógica proposicional y una interfaz gráfica moderna para asistir en el diagnóstico de enfermedades respiratorias. El sistema emplea un enfoque de preguntas inteligentes y adaptativas para llegar a conclusiones de manera eficiente.
 
-Características Principales
+#Características Principales
 Sistema de Preguntas Inteligente
 Priorización automática de síntomas más relevantes
 
