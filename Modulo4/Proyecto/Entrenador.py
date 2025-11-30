@@ -3,7 +3,8 @@
 # Dataset: FER-2013 (Kaggle)
 # Emociones: sad, happy, angry, neutral
 # ==========================================
-#!pip install tensorflow
+#Ejecute en google colab
+#!pip install tensorflow 
 import os
 import zipfile
 import numpy as np
@@ -21,17 +22,17 @@ import shutil
 NOMBRE_DEL_ZIP = "archive.zip"
 IMG_SIZE = 48  # FER-2013 usa 48x48
 BATCH_SIZE = 32
-EPOCHS = 40
+EPOCHS = 60
 
 # MAPEO FER-2013 A 4 CLASES
-# FER-2013 tiene: angry(0), disgust(1), fear(2), happy(3), sad(4), surprise(5), neutral(6)
+# FER-2013 tiene: angry, disgust, fear, happy, sad, surprise, neutral y se cambian de la siguiente manera 
 FER_TO_4CLASS = {
     'angry': 'angry',
     'disgust': 'angry',  # Disgust se parece a angry
     'fear': 'sad',       # Fear se parece a sad
     'happy': 'happy',
-    'sad': 'sad',
-    'surprise': 'happy',  # Surprise la consideramos neutral
+    'sad': 'sad',    
+    'surprise': 'happy', #Surprise se parece a happy 
     'neutral': 'neutral'
 }
 
@@ -285,4 +286,5 @@ def sistema_principal():
     print("="*60)
 
 if __name__ == "__main__":
+
     sistema_principal()
