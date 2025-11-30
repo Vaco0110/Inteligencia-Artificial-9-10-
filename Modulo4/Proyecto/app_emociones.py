@@ -5,6 +5,9 @@ Detecta: happy, sad, angry, neutral
 Optimizado para FER-2013 con estabilización mejorada
 """
 
+"""
+!!! Favor de cambiar el campo RUTA_CARPETA con la ubiacion de su modelo entrenado con terminación .h5 para su ejecución correcta !!!
+"""
 import cv2
 import numpy as np
 import tensorflow as tf
@@ -14,7 +17,7 @@ import sys
 from collections import deque
 
 # ============================================================================
-# CONFIGURACIÓN GPU
+# CONFIGURACIÓN GPU en caso de tener una 
 # ============================================================================
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
@@ -377,4 +380,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"\n❌ ERROR: {e}")
         import traceback
+
         traceback.print_exc()
