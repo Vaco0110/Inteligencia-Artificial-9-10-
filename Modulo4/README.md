@@ -3,6 +3,8 @@
 Sistema completo de reconocimiento de emociones faciales en tiempo real utilizando Deep Learning y el dataset FER-2013. Detecta 4 emociones principales: >:( Enojo, :) Felicidad, ._. Neutral, <:,( Tristeza.
 
 ## Requisitos
+### Dataset
+- FER-2013
 
 ### Librerías Principales (CRÍTICAS)
 - tensorflow	            2.13.0	            Framework de ML/DL principal
